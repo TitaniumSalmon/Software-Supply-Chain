@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Warning</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #ff0000; color: #ffff00; font-family: sans-serif; }
+    .center { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .message { font-size: 3rem; font-weight: 700; }
+    .count { font-size: 2rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div class="message">คุณโดน hack แล้ว</div>
+    <div class="count" id="count">30 วินาที</div>
+  </div>
+  <script>
+    (function(){
+      var el = document.getElementById('count');
+      var t = 30;
+      el.textContent = t + ' วินาที';
+      var iv = setInterval(function(){
+        t--;
+        if (t < 0) {
+          el.textContent = 'เปิดคอมใหม่ให้สนุก ggez';
+          clearInterval(iv);
+        } else {
+          el.textContent = t + ' วินาที';
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
